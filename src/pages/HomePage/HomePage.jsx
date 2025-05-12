@@ -4,7 +4,7 @@ import s from './HomePage.module.css'
 
 export const HomePage = () => {
     return (
-        <div>
+        <div className={s.mainWrapper}>
             <h1 className={`pageTitle ${s.title}`}>The Rick and Morty</h1>
             <div  className={s.linkWrapper}>
                 <NavLink to={'/characters'} className={"linkButton"}>Characters</NavLink>
