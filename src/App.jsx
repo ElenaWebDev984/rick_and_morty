@@ -11,9 +11,9 @@ function App() {
             <Header />
            <Routes>
                <Route path="/" element={<HomePage />} />
-               <Route path="/" element={<CharacterPage />} />
-               <Route path="/" element={ <LocationPage />} />
-               <Route path="/" element={<EpisodePage />} />
+               <Route path="/characters" element={<CharacterPage />} />
+               <Route path="/locations" element={ <LocationPage />} />
+               <Route path="/episodies" element={<EpisodePage />} />
            </Routes>
         </div>
     )
