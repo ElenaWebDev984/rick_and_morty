@@ -12,11 +12,17 @@ export const CharacterPage = () => {
         prev: null,
     })
 
+    const [error, setError] = useState(null)
+
     const fetchData = (url) => {
         axios.get(url).then((res) => {
             setCharacters(res.data.results)
             setInfo(res.data.info)
+            setError(null)
         })
+            .catch((err) => {
+                setError(err.response.data.error)
+            })
     }
 
     useEffect(() => {
@@ -40,8 +46,9 @@ export const CharacterPage = () => {
     return (
         <div className={"pageContainer"}>
             <h1 className={"pageTitle"}>CharacterPage</h1>
-            <input type="search" className={s.search} onChange={searchHandler} placeholder="Search..." />
-            {characters.length && (
+            <input type="search" className={s.search} onChange={searchHandler} placeholder="Search..."/>
+            {error && <div className="errorMessage">{error}</div>}
+            {!error && characters.length && (
                 <>
                     {
                         <div className={s.characters}>
