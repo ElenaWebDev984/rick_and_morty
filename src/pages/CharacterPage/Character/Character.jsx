@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react"
+import {useEffect, useState} from "react"
 import axios from "axios"
-import { useParams } from "react-router"
+import {Link, useParams} from "react-router"
 import s from "./Character.module.css"
 
 export const Character = () => {
-    const { id } = useParams()
+    const {id} = useParams()
 
     const [character, setCharacter] = useState(null)
 
@@ -20,7 +20,7 @@ export const Character = () => {
                 <div className={s.container}>
                     <h1 className="pageTitle">{character.name}</h1>
                     <div className={s.content}>
-                        <img className={s.img} src={character.image} alt="character" />
+                        <img className={s.img} src={character.image} alt="character"/>
                         <div className={s.description}>
                             <div className={s.statusContainer}>
                                 <div>
@@ -37,6 +37,9 @@ export const Character = () => {
                             </div>
                         </div>
                     </div>
+                    <Link to={"/characters"} className={"linkButton"}>
+                        Go back
+                    </Link>
                 </div>
             )}
         </div>
