@@ -8,13 +8,13 @@ import {Route, Routes} from "react-router";
 function App() {
     return (
         <div>
-            <Header />
-           <Routes>
-               <Route path="/" element={<HomePage />} />
-               <Route path="/characters" element={<CharacterPage />} />
-               <Route path="/locations" element={ <LocationPage />} />
-               <Route path="/episodies" element={<EpisodePage />} />
-           </Routes>
+            <Header/>
+            <Routes>
+                <Route path="/" element={<HomePage/>}/>
+                <Route path="/characters" element={<CharacterPage/>}/>
+                <Route path="/locations" element={<LocationPage/>}/>
+                <Route path="/episodes" element={<EpisodePage/>}/>
+            </Routes>
         </div>
     )
 }
