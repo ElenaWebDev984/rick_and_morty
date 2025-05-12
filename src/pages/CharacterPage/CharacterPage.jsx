@@ -15,9 +15,15 @@ export const CharacterPage = () => {
         <div>
             <h1 className={"pageTitle"}>CharacterPage</h1>
             {characters.length && (
-                <div className={s.character}>
-                    <div className={s.characterLink}>{characters[0].name}</div>
-                    <img src={characters[0].image} alt={`${characters[0].name} avatar`}/>
+                <div className={s.characters}>
+                    <div className={s.character}>
+                        <div className={s.characterLink}>{characters[0].name}</div>
+                        <img src={characters[0].image} alt={`${characters[0].name} avatar`}/>
+                    </div>
+                    <div className={s.character}>
+                        <div className={s.characterLink}>{characters[1].name}</div>
+                        <img src={characters[1].image} alt={`${characters[1].name} avatar`}/>
+                    </div>
                 </div>
             )}
         </div>
