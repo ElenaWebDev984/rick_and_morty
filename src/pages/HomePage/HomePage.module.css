@@ -1,3 +1,8 @@
 .title {
     font-size: 100px;
 }
+
+.linkWrapper {
+    display: flex;
+    justify-content: center;
+}
