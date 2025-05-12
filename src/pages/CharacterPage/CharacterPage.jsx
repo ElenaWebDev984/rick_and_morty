@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import {useEffect, useState} from "react"
 import axios from "axios"
 import s from "./CharacterPage.module.css"
 
@@ -14,7 +14,12 @@ export const CharacterPage = () => {
     return (
         <div>
             <h1 className={"pageTitle"}>CharacterPage</h1>
-            <div>{characters[0].name}</div>
+            {characters.length && (
+                <div className={s.character}>
+                    <div className={s.characterLink}>{characters[0].name}</div>
+                    <img src={characters[0].image} alt={`${characters[0].name} avatar`}/>
+                </div>
+            )}
         </div>
     )
 }
