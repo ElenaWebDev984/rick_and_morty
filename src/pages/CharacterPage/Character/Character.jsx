@@ -23,6 +23,7 @@ export const Character = () => {
                         <img className={s.img} src={character.image} alt="character"/>
                         <div className={s.description}>
                             <div className={s.statusContainer}>
+                                <div className={`${s.status} ${s.aliveStatus}`}></div>
                                 <div>
                                     {character.status} - {character.species}
                                 </div>
