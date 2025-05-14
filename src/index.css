@@ -27,7 +27,6 @@ body {
 }
 
 .pageTitle {
-  margin: 0;
   color: var(--slate-800);
   font-weight: 900;
   font-size: 70px;
